@@ -39,4 +39,10 @@ for i = 1 : size(fileNames, 1)
 end
 
 %For loop to store the message and cipher in Binary form
+for i = 1 : size(fileNames, 1)
+    for j = 1 : size(messageData, 2)
+        messageBinary(j, :, i) = hexToBinaryVector(messageData(i,j), 4);
+        cipherBinary(j, :, i) = hexToBinaryVector(cipherData(i,j), 4);
+    end
+end
 

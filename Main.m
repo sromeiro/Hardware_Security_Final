@@ -38,11 +38,13 @@ for i = 1 : size(fileNames, 1)
     cipherData(i, :) = fileNames(i).name(delimiters(8)+3 : 89);
 end
 
+%======================BINARY CONVERSION OF DATA==========================%
 %For loop to store the message and cipher in Binary form
-for i = 1 : size(fileNames, 1)
-    for j = 1 : size(messageData, 2)
-        messageBinary(j, :, i) = hexToBinaryVector(messageData(i,j), 4);
-        cipherBinary(j, :, i) = hexToBinaryVector(cipherData(i,j), 4);
-    end
-end
+% for i = 1 : size(fileNames, 1)
+%     for j = 1 : size(messageData, 2)
+%         messageBinary(j, :, i) = hexToBinaryVector(messageData(i,j), 4);
+%         cipherBinary(j, :, i) = hexToBinaryVector(cipherData(i,j), 4);
+%     end
+% end
+%=========================================================================%
 
